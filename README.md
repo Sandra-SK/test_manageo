@@ -10,10 +10,10 @@
 
 ### Gestion profil utilisateur:
 - enregistrement, modification, et suppression CRUD
-- authentification par access-token via fichier auth.js
-- données d'environements gérées avec dotenv 
+- authentification par access-token via fichier 'api-back/auth.js',''api-back/routes/authRoutes.js' et dans le front via 'src/helpers/require-data-auth.jsx' et '' 
+- données d'environements gérées avec dotenv
 
-
+  
 
 ## INSTALLATION DU PROJET
 
