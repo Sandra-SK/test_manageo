@@ -10,7 +10,7 @@
 
 ### Gestion profil utilisateur:
 - enregistrement, modification, et suppression CRUD
-- authentification par access-token via fichier 'api-back/auth.js',''api-back/routes/authRoutes.js' et dans le front via 'src/helpers/require-data-auth.jsx' et '' 
+- authentification par access-token via fichier 'api-back/auth.js',''api-back/routes/authRoutes.js' et dans le front via 'src/helpers/require-data-auth.jsx'
 - données d'environements gérées avec dotenv
 
   
