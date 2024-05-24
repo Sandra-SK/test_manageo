@@ -38,8 +38,8 @@ module.exports = (app, db)=>{
             }
         }
         
-        // Vérification si nom et prénom existants
-        let checkName = await userModel.getUserByName(req.body.firstName, req.body.lastName);
+        // Vérification si nom existe
+        let checkName = await userModel.getUserByName(req.body.name);
         if (checkName.code) {
             return res.json({ status: 500, msg: "Erreur lors de la vérification du nom et prénom.", err: checkName });
         }
@@ -52,7 +52,7 @@ module.exports = (app, db)=>{
         else {
    
             //ajout d'un regex pour contrôler la qualité minimum du mot de passe choisi
-            const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*-_])(?=.{8,})/
+            const passwordRegex = /^.{8,}$/;
             if (!passwordRegex.test(req.body.password)){
                 return res.json({status:400, msg:"Le mot de passe doit contenir au moins une lettre minuscule, une lettre majuscule, un chiffre, un caractère spécial (!@#$%^&*-_) et comporter 8 caractères minimum."})
             }
@@ -68,7 +68,6 @@ module.exports = (app, db)=>{
     
     //route de connexion d'un utilisateur (création token)
     app.post('/api/v1/user/login',checkSqlInjection, async (req, res, next)=>{
-        console.log("on entre sur la route login")
         if(req.body.email === ""){
             return res.json({status: 401, msg: "Entrez un email..."})
         }
