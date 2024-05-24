@@ -1,0 +1,129 @@
+/* Reset des styles par défaut */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style de base pour le formulaire */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Section d'enregistrement */
+#register-section {
+  width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+ p {
+  margin-top: 20px;
+ }
+
+/* Champs de formulaire */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Bouton de soumission */
+form input[type="submit"] {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  background-color: #6c757d; /* Gris */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #5a6268; /* Gris légèrement plus foncé au survol */
+}
+
+/* Bouton de suppression */
+.delete-button {
+  display: inline-block;
+  width: 30%;
+  padding: 10px;
+  background-color: #d9534f; /* Rouge */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  margin-right: 2%;
+  font-size: 14px;
+}
+
+.delete-button:hover {
+  background-color: #c9302c; /* Rouge légèrement plus foncé au survol */
+}
+
+/* Bouton de déconnexion */
+.logout-button {
+  display: inline-block;
+  width: 68%;
+  padding: 10px;
+  background-color: #6c757d; /* Gris */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.logout-button:hover {
+  background-color: #5a6268; /* Gris légèrement plus foncé au survol */
+}
+
+/* Liens à l'intérieur des boutons */
+.logout-button a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+/* Messages */
+.okMessage,
+.errorMessage {
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.okMessage {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.errorMessage {
+  background-color: #d9534f;
+  color: #fff;
+}
